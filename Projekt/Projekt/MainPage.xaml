@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Width="1280" Height="720">
+    Width="1280" Height="7200">
 
     <Grid Background="White">
         <Image Width="200" Height="100" Source="Assets/AvenyLogo.png" Margin="0, 0, 1100, 620"/>
