@@ -20,7 +20,7 @@ namespace Projekt.Model
         public string Adresse
         {
             get => _adresse;
-            set => _adresse = value
+            set => _adresse = value;
         }
         public int Tlf
         {
