@@ -95,7 +95,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Butik.cs" />
+    <Compile Include="Model\Martriale.cs" />
     <Compile Include="Model\produkt.cs" />
+    <Compile Include="Model\Type.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
