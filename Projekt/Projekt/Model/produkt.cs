@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,12 @@ namespace Projekt.Model
             get => _produktNavn;
             set => _produktNavn = value;
         }
+
+        internal static void Add(Produkt i)
+        {
+            throw new NotImplementedException();
+        }
+
         public int MartrialeID
         {
             get => _martrialeID;
@@ -39,17 +46,22 @@ namespace Projekt.Model
             get => _størrelse;
             set => _størrelse = value;
         }
-        private int TypeID
+        public int TypeID
         {
             get => _typeID;
             set => _typeID = value;
         }
-        private string Pris
+        public string Pris
         {
             get => _pris;
             set => _pris = value;
         }
+        public string antal { get; internal set; }
 
+        public static implicit operator ObservableCollection<object>(Produkt v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
