@@ -6,24 +6,25 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Width="1280" Height="720">
+    Width="1280" Height="720" Background="White">
 
-    <Grid Background="White>
+    <Grid Background="White">
         <Image Width="200" Height="100" Source="Assets/AvenyLogo.png" Margin="0, 0, 1100, 620"/>
-        <Border  BorderBrush="Blue" BorderThickness="2" Width="1100" Height="400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100 100 0 0">
+        
+        <Border BorderBrush="Blue" BorderThickness="2" Width="1100" Height="400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100 100 0 0">
             <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" BorderBrush="Black" BorderThickness="2" Width="1100" Height="30" Margin="0 -370 0 0">
                 <TextBlock Text="Produkt Navn"      Width="100" Height="50" Margin="50 3 0 0"/>
                 <Button Content="Type ↓"            Width="100" Height="50" Margin="120 3 0 0"/>
                 <Button Content="Materiale ↓"       Width="100" Height="50" Margin="50 3 0 0"/>
-                <TextBlock Text="Størrelse"          Width="100" Height="50" Margin="50 3 0 0"/>
+                <TextBlock Text="Størrelse"         Width="100" Height="50" Margin="50 3 0 0"/>
                 <Button Content="Butik ↓"           Width="100" Height="50" Margin="0 3 0 0"/>
                 <TextBlock Text="Antal"             Width="100" Height="50" Margin="100 3 0 0"/>
                 <TextBlock Text="Pris:"             Width="100" Height="50" Margin="20 3 0 0"/>
                 <TextBlock />
             </StackPanel>
 
-        </Border>
+       </Border>
         <TextBox Text="" PlaceholderText="Skriv her hvad du søger efter" Width="500" Height="30" BorderBrush="Black" IsSpellCheckEnabled="True" BorderThickness="1" Margin="-580 400 0 0" />
-        <Button Content="Big friendly button" Margin="670 400 0 0"/>
+    <Button Content="Big friendly button" Margin="670 400 0 0"/>
     </Grid>
 </Page>
