@@ -57,6 +57,7 @@ namespace Projekt.Model
             set => _pris = value;
         }
         public string antal { get; internal set; }
+        public static object instances { get; internal set; }
 
         public static implicit operator ObservableCollection<object>(Produkt v)
         {

@@ -22,10 +22,14 @@ namespace Projekt.ViewModel
         public ProduktList()
         {
             _newprodukt = new Produkt();
-            _produktCatalog = = Produkt.instances;
+            _produktCatalog = Produkt.instances;
 
             _displayProdukt = _produktCatalog;
 
+        }
+
+        private class RelayCommand
+        {
         }
     }
      
