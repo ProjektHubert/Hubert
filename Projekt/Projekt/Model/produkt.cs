@@ -30,12 +30,6 @@ namespace Projekt.Model
             get => _produktNavn;
             set => _produktNavn = value;
         }
-
-        internal static void Add(Produkt i)
-        {
-            throw new NotImplementedException();
-        }
-
         public int MartrialeID
         {
             get => _martrialeID;
@@ -56,13 +50,12 @@ namespace Projekt.Model
             get => _pris;
             set => _pris = value;
         }
-        public string antal { get; internal set; }
-        public static object instances { get; internal set; }
-
-        public static implicit operator ObservableCollection<object>(Produkt v)
+        public string antal
         {
-            throw new NotImplementedException();
+            get;
+            set;
         }
+        
     }
 
 }

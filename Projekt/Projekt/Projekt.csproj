@@ -100,6 +100,8 @@
     <Compile Include="Model\produkt.cs" />
     <Compile Include="Model\Type.cs" />
     <Compile Include="ViewModel\Viewlist.cs" />
+    <Compile Include="ViewModel\ViewListDataViewModel.cs" />
+    <Compile Include="ViewModel\Viewlistmodel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
