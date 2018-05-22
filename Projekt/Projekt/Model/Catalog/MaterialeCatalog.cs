@@ -9,5 +9,19 @@ namespace Projekt.Model.Catalog
 {
     public class MaterialeCatalog : CatalogAppBase<Materiale>
     {
+        private static MaterialeCatalog _instance;
+
+        public static MaterialeCatalog Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new MaterialeCatalog();
+                }
+
+                return _instance;
+            }
+        }
     }
 }

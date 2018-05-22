@@ -9,5 +9,19 @@ namespace Projekt.Model.Catalog
 {
     public class ButikCatalog : CatalogAppBase<Butik>
     {
+        private static ButikCatalog _instance;
+
+        public static ButikCatalog Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new ButikCatalog();
+                }
+
+                return _instance;
+            }
+        }
     }
 }

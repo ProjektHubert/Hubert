@@ -9,5 +9,19 @@ namespace Projekt.Model.Catalog
 {
     public class TypeCatalog : CatalogAppBase<Type>
     {
+        private static TypeCatalog _instance;
+
+        public static TypeCatalog Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new TypeCatalog();
+                }
+
+                return _instance;
+            }
+        }
     }
 }

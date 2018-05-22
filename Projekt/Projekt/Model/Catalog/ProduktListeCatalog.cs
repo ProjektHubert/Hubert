@@ -9,5 +9,19 @@ namespace Projekt.Model.Catalog
 {
     public class ProduktListeCatalog : CatalogAppBase<ProduktListe>
     {
+        private static ProduktListeCatalog _instance;
+
+        public static ProduktListeCatalog Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new ProduktListeCatalog();();
+                }
+
+                return _instance;
+            }
+        }
     }
 }
