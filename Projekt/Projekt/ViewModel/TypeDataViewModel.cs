@@ -7,10 +7,20 @@ using ViewModel.Data.Implementation;
 
 namespace Projekt.ViewModel
 {
-    class TypeDataViewModel : DataViewModelBase<Type>
+    public class TypeDataViewModel : DataViewModelBase<Type>
     {
-        protected TypeDataViewModel(Type obj) : base(obj)
+        public TypeDataViewModel(Type obj) : base(obj)
         {
+        }
+
+        public int TypeID
+        {
+            get { return DataObject.TypeId; }
+        }
+
+        public string TypeNavn
+        {
+            get { return DataObject.TypeNavn; }
         }
     }
 }

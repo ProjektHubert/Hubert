@@ -99,9 +99,19 @@
     <Compile Include="HubertdbContext.cs" />
     <Compile Include="Materiale.cs" />
     <Compile Include="Model\Base\CatalogAppBase.cs" />
+    <Compile Include="Model\Catalog\ButikCatalog.cs" />
+    <Compile Include="Model\Catalog\MaterialeCatalog.cs" />
+    <Compile Include="Model\Catalog\ProduktCatalog.cs" />
+    <Compile Include="Model\Catalog\ProduktListeCatalog.cs" />
+    <Compile Include="Model\Catalog\TypeCatalog.cs" />
     <Compile Include="Produkt.cs" />
     <Compile Include="ProduktListe.cs" />
     <Compile Include="Type.cs" />
+    <Compile Include="ViewModel\ButikDataViewModel.cs" />
+    <Compile Include="ViewModel\MaterialeDataViewModel.cs" />
+    <Compile Include="ViewModel\ProduktDataViewModel.cs" />
+    <Compile Include="ViewModel\ProduktListeDataViewModel.cs" />
+    <Compile Include="ViewModel\ProduktPageViewModel.cs" />
     <Compile Include="ViewModel\ShowProduktCmd.cs" />
     <Compile Include="ViewModel\TypeDataViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
@@ -174,9 +184,7 @@
       <HintPath>..\..\..\..\..\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018DLLs\ViewModel.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Catalog\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

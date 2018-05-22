@@ -13,6 +13,10 @@ namespace Projekt.Model.Base
 
 
     {
+        public CatalogAppBase()
+        {
+            LoadAsync();
+        }
         public override T CreateDomainObjectFromViewDataObject(T vmObj)
         {
             return vmObj;
