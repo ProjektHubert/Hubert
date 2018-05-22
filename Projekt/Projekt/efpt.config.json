@@ -1,0 +1,1 @@
+﻿{"ContextClassName":"HubertdbContext","DefaultDacpacSchema":null,"IdReplace":false,"IncludeConnectionString":true,"OutputPath":"","ProjectRootNamespace":"Projekt","SelectedToBeGenerated":0,"Tables":["dbo.Butik","dbo.Materiale","dbo.Produkt","dbo.ProduktListe","dbo.Type"],"UseDatabaseNames":false,"UseFluentApiOnly":true,"UseHandleBars":false,"UseInflector":true}
