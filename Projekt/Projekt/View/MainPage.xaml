@@ -43,12 +43,12 @@
         <ListView FlowDirection="LeftToRight" 
                   BorderBrush="Black" BorderThickness="2 0 2 2" Width="1100" Height="300" 
                   Margin="0 0 0 40" ItemsSource="{Binding Path=ItemCollection}">
-            <!--<TextBlock Text="{Binding Path=ItemSelected.DataObject.FkProdukt.ProduktNavn}" FontSize="10"/>
-            <TextBlock Text="{Binding Path=ItemSelected.DataObject.FkProdukt.FkType.TypeNavn}" FontSize="10"/>
-            <TextBlock Text="{Binding Path=ItemSelected.DataObject.FkProdukt.FkMateriale.MaterialeNavn}" FontSize="10"/>
-            <TextBlock Text="{Binding Path=ItemSelected.DataObject.Antal}" FontSize="10"/>
-            <TextBlock Text="{Binding Path=ItemSelected.DataObject.FkButik.Adresse}" FontSize="10"/>
-            <TextBlock Text="{Binding Path=ItemSelected.DataObject.Pris}" FontSize="10"/>-->
+            <TextBlock Text="{Binding ProduktNavn}" FontSize="10"/>
+            <TextBlock Text="{Binding TypeNavn}" FontSize="10"/>
+            <TextBlock Text="{Binding MaterialeNavn}" FontSize="10"/>
+            <TextBlock Text="{Binding Antal}" FontSize="10"/>
+            <TextBlock Text="{Binding Adresse}" FontSize="10"/>
+            <TextBlock Text="{Binding }" FontSize="10"/>-->
         </ListView>
 
         <!--</Border>-->

@@ -21,13 +21,13 @@ namespace Projekt.ViewModel
         {
             get { return DataObject.ProduktNavn; }
         }
-        public int? fkMaterialeID
+        public string Materiale
         {
-            get { return DataObject.FkMaterialeId; }
+            get { return DataObject.Materiale; }
         }
-        public int? fkTypeID
+        public string Type
         {
-            get { return DataObject.FkTypeId; }
+            get { return DataObject.Type; }
         }
         public override string ToString()
         {

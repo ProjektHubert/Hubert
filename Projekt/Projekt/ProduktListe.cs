@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Data.InMemory.Interfaces;
-using Data.Transformed.Implementation;
-using Projekt.Model.Catalog;
 
 namespace Projekt
 {
@@ -16,7 +14,6 @@ namespace Projekt
 
         public Butik FkButik { get; set; }
         public Produkt FkProdukt { get; set; }
-
         public ICopyable Copy()
         {
             return (MemberwiseClone() as ICopyable);
@@ -30,8 +27,7 @@ namespace Projekt
 
         public override string ToString()
         {
-            Produkt p = ProduktCatalog.Instance.Read(FkProduktId);
-            return $"{p.ProduktNavn}, {FkButikId}, {Stoerrelse}";
+            return $"{FkProduktId}, {FkButikId}, {Stoerrelse}";
         }
     }
 }

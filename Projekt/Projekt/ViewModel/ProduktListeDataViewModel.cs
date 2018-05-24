@@ -40,8 +40,12 @@ namespace Projekt.ViewModel
         }
         public override string ToString()
         {
-            Produkt p = ProduktCatalog.Instance.Read(fkProduktID);
-            return $"{p.ProduktNavn}, {fkButikID}, {Stoerrelse}";
+            Produkt pn = ProduktCatalog.Instance.Read(fkProduktID);
+            Produkt pt = ProduktCatalog.Instance.Read(fkProduktID);
+            Produkt pm = ProduktCatalog.Instance.Read(fkProduktID);
+            Butik b = ButikCatalog.Instance.Read(fkButikID);
+
+            return $"{pn.ProduktNavn}, {pt.Type} {pm.Materiale},{b.Adresse}, {Antal}, {Stoerrelse}, {Pris}kr";
         }
     }
 }

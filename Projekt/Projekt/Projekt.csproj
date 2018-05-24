@@ -97,26 +97,19 @@
     </Compile>
     <Compile Include="Butik.cs" />
     <Compile Include="HubertdbContext.cs" />
-    <Compile Include="Materiale.cs" />
     <Compile Include="Model\Base\CatalogAppBase.cs" />
     <Compile Include="Model\Catalog\ButikCatalog.cs" />
-    <Compile Include="Model\Catalog\MaterialeCatalog.cs" />
     <Compile Include="Model\Catalog\ProduktCatalog.cs" />
     <Compile Include="Model\Catalog\ProduktListeCatalog.cs" />
-    <Compile Include="Model\Catalog\TypeCatalog.cs" />
     <Compile Include="Produkt.cs" />
     <Compile Include="ProduktListe.cs" />
-    <Compile Include="Type.cs" />
     <Compile Include="ViewModel\ButikDataViewModel.cs" />
     <Compile Include="ViewModel\ButikPageViewModel.cs" />
-    <Compile Include="ViewModel\MaterialeDataViewModel.cs" />
-    <Compile Include="ViewModel\MaterialePageViewModel.cs" />
     <Compile Include="ViewModel\ProduktDataViewModel.cs" />
     <Compile Include="ViewModel\ProduktListeDataViewModel.cs" />
     <Compile Include="ViewModel\ProduktListePageViewModel.cs" />
     <Compile Include="ViewModel\ProduktPageViewModel.cs" />
     <Compile Include="ViewModel\ShowProduktCmd.cs" />
-    <Compile Include="ViewModel\TypeDataViewModel.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

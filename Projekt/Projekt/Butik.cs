@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Data.InMemory.Interfaces;
-using Data.Transformed.Implementation;
 
 namespace Projekt
 {
@@ -17,7 +16,6 @@ namespace Projekt
         public string Tlf { get; set; }
 
         public ICollection<ProduktListe> ProduktListes { get; set; }
-
         public ICopyable Copy()
         {
             return (MemberwiseClone() as ICopyable);
