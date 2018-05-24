@@ -17,11 +17,17 @@ namespace Projekt.Model.Catalog
             {
                 if (_instance == null)
                 {
-                    _instance = new ProduktListeCatalog();();
+                    _instance = new ProduktListeCatalog();
+                    Load();
                 }
 
                 return _instance;
             }
+        }
+
+        public static async void Load()
+        {
+            await _instance.LoadAsync();
         }
     }
 }

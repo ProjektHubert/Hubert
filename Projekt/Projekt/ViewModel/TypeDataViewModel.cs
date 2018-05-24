@@ -22,5 +22,9 @@ namespace Projekt.ViewModel
         {
             get { return DataObject.TypeNavn; }
         }
+        public override string ToString()
+        {
+            return $"{TypeID}";
+        }
     }
 }

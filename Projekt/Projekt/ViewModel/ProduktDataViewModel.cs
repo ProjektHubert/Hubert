@@ -29,5 +29,9 @@ namespace Projekt.ViewModel
         {
             get { return DataObject.FkTypeId; }
         }
+        public override string ToString()
+        {
+            return $"{ProduktID}";
+        }
     }
 }

@@ -22,5 +22,9 @@ namespace Projekt.ViewModel
         {
             get { return DataObject.MaterialeNavn; }
         }
+        public override string ToString()
+        {
+            return $"{MaterialeID}";
+        }
     }
 }

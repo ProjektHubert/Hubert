@@ -18,10 +18,18 @@ namespace Projekt.Model.Catalog
                 if (_instance == null)
                 {
                     _instance = new MaterialeCatalog();
+                    Load();
                 }
 
                 return _instance;
             }
         }
+
+        public static async void Load()
+        {
+            await _instance.LoadAsync();
+        }
+        private MaterialeCatalog()
+        { }
     }
 }

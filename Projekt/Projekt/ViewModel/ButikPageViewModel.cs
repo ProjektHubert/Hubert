@@ -10,21 +10,21 @@ using Projekt.Model.Catalog;
 
 namespace Projekt.ViewModel
 {
-    public class ProduktPageViewModel : PageViewModelCRUD<Produkt>
+    public class ButikPageViewModel : PageViewModelCRUD<Butik>
     {
-        public ProduktPageViewModel() : base(ProduktCatalog.Instance, new List<string>(), new List<string>())
+        public ButikPageViewModel(ICatalog<Butik> catalog, List<string> immutableControls, List<string> mutableControls) : base(catalog, immutableControls, mutableControls)
         {
-            ProduktCatalog.Instance.LoadEnds += InstanceOnLoadEnds;
+            ButikCatalog.Instance.LoadEnds += InstanceOnLoadEnds;
         }
-
         private void InstanceOnLoadEnds()
         {
             OnPropertyChanged(nameof(ItemCollection));
         }
 
-        public override IDataWrapper<Produkt> CreateDataViewModel(Produkt obj)
+        public override IDataWrapper<Butik> CreateDataViewModel(Butik obj)
         {
-            return new ProduktDataViewModel(obj);
+            return new ButikDataViewModel(obj);
         }
+
     }
 }

@@ -27,5 +27,9 @@ namespace Projekt.ViewModel
         {
             get { return DataObject.Tlf; }
         }
+        public override string ToString()
+        {
+            return $"{ButikID}";
+        }
     }
 }

@@ -18,10 +18,16 @@ namespace Projekt.Model.Catalog
                 if (_instance == null)
                 {
                     _instance = new TypeCatalog();
+                    Load();
                 }
 
                 return _instance;
             }
+        }
+
+        public static async void Load()
+        {
+            await _instance.LoadAsync();
         }
     }
 }

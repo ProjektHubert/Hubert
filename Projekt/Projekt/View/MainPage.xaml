@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="Projekt.MainPage"
+    x:Class="Projekt.View.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Projekt"
+    xmlns:local="using:Projekt.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:Projekt.ViewModel"
@@ -10,29 +10,48 @@
     Width="1280" Height="720" Background="White">
 
     <Page.DataContext>
-    <viewModel:ProduktPageViewModel/>
+        <viewModel:ProduktListePageViewModel/>
     </Page.DataContext>
-    
+
     <Grid Background="White">
         <Image Width="200" Height="100" Source="../Assets/AvenyLogo.png" Margin="0, 0, 1100, 620"/>
-        <Border BorderBrush="Blue" BorderThickness="2" Width="1100" Height="400" HorizontalAlignment="Left"
-                VerticalAlignment="Top" Margin="100 100 0 0">
-            
-               <!-- <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" BorderBrush="Black"
-                            BorderThickness="2" Width="1100" Height="30" Margin="0 -370 0 0">
-                    <TextBlock Text="Produkt Navn" Width="100" Height="50" Margin="50 3 0 0" />
-                    <Button Content="Type ↓" Width="100" Height="50" Margin="120 3 0 0" Background="Transparent" />
-                    <Button Content="Materiale ↓" Width="100" Height="50" Margin="50 3 0 0" Background="Transparent" />
-                    <TextBlock Text="Størrelse" Width="100" Height="50" Margin="50 3 0 0" />
-                    <Button Content="Butik ↓" Width="100" Height="50" Margin="0 3 0 0" Background="Transparent" />
-                    <TextBlock Text="Antal" Width="100" Height="50" Margin="100 3 0 0" />
-                    <TextBlock Text="Pris:" Width="100" Height="50" Margin="20 3 0 0" />
-                    <TextBlock />
-                </StackPanel>-->
+        <!--<Border BorderBrush="Blue" BorderThickness="2" Width="1100" Height="400" HorizontalAlignment="Left"
+                VerticalAlignment="Top" Margin="100 100 0 0">-->
 
-            <ListBox ItemsSource="{Binding ItemCollection}" />
-            
-        </Border>
+        <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" BorderBrush="Black"
+                            BorderThickness="2" Width="1100" Height="30" Margin="0 -370 0 0">
+            <TextBlock Text="Produkt Navn" Width="100" Height="50" Margin="50 3 0 0" />
+            <Button Content="Type ↓" Width="100" Height="50" Margin="120 3 0 0" Background="Transparent" />
+            <Button Content="Materiale ↓" Width="100" Height="50" Margin="50 3 0 0" Background="Transparent" />
+            <TextBlock Text="Størrelse" Width="100" Height="50" Margin="50 3 0 0" />
+            <Button Content="Butik ↓" Width="100" Height="50" Margin="0 3 0 0" Background="Transparent" />
+            <TextBlock Text="Antal" Width="100" Height="50" Margin="100 3 0 0" />
+            <TextBlock Text="Pris:" Width="100" Height="50" Margin="20 3 0 0" />
+
+        </StackPanel>
+        <!--<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" 
+                    BorderBrush="Black" BorderThickness="2 0 2 2" Width="1100" Height="300" 
+                    Margin="0 0 0 40">
+            <TextBlock Text="{Binding Path=ItemSelected.DataObject.ProduktNavn}" Width="200" Height="50" Margin="50 3 0 0"/>
+            <TextBlock Text="{Binding ItemCollection}" Width="100" Height="50" Margin="120 3 0 0"/>
+            <TextBlock Text="a" Width="100" Height="50" Margin="50 3 0 0"/>
+            <TextBlock Text="a" Width="100" Height="50" Margin="50 3 0 0"/>
+            <TextBlock Text="a" Width="100" Height="50" Margin="0 3 0 0"/>
+            <TextBlock Text="a" Width="100" Height="50" Margin="100 3 0 0"/>
+            <TextBlock Text="a" Width="100" Height="50" Margin="20 3 0 0"/>
+        </StackPanel>-->
+        <ListView FlowDirection="LeftToRight" 
+                  BorderBrush="Black" BorderThickness="2 0 2 2" Width="1100" Height="300" 
+                  Margin="0 0 0 40" ItemsSource="{Binding Path=ItemCollection}">
+            <!--<TextBlock Text="{Binding Path=ItemSelected.DataObject.FkProdukt.ProduktNavn}" FontSize="10"/>
+            <TextBlock Text="{Binding Path=ItemSelected.DataObject.FkProdukt.FkType.TypeNavn}" FontSize="10"/>
+            <TextBlock Text="{Binding Path=ItemSelected.DataObject.FkProdukt.FkMateriale.MaterialeNavn}" FontSize="10"/>
+            <TextBlock Text="{Binding Path=ItemSelected.DataObject.Antal}" FontSize="10"/>
+            <TextBlock Text="{Binding Path=ItemSelected.DataObject.FkButik.Adresse}" FontSize="10"/>
+            <TextBlock Text="{Binding Path=ItemSelected.DataObject.Pris}" FontSize="10"/>-->
+        </ListView>
+
+        <!--</Border>-->
         <TextBox Text="" PlaceholderText="Skriv her hvad du søger efter" Width="500" Height="30" BorderBrush="Black" IsSpellCheckEnabled="True" BorderThickness="1" Margin="-580 400 0 0" />
         <Button Content="Big friendly button" Margin="670 400 0 0"/>
     </Grid>

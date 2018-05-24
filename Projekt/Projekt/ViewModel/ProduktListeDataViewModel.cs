@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Projekt.Model.Catalog;
 using ViewModel.Data.Implementation;
 
 namespace Projekt.ViewModel
@@ -36,6 +37,11 @@ namespace Projekt.ViewModel
         public int Stoerrelse
         {
             get { return DataObject.Stoerrelse; }
+        }
+        public override string ToString()
+        {
+            Produkt p = ProduktCatalog.Instance.Read(fkProduktID);
+            return $"{p.ProduktNavn}, {fkButikID}, {Stoerrelse}";
         }
     }
 }

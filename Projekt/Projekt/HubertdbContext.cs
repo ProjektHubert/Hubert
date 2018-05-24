@@ -34,6 +34,8 @@ namespace Projekt
                 entity.Property(e => e.Adresse).IsUnicode(false);
 
                 entity.Property(e => e.Tlf).IsUnicode(false);
+
+                entity.Ignore(e => e.Key);
             });
 
             modelBuilder.Entity<Materiale>(entity =>
@@ -45,6 +47,7 @@ namespace Projekt
                     .ValueGeneratedNever();
 
                 entity.Property(e => e.MaterialeNavn).IsUnicode(false);
+                entity.Ignore(e => e.Key);
             });
 
             modelBuilder.Entity<Produkt>(entity =>
@@ -60,6 +63,18 @@ namespace Projekt
                 entity.Property(e => e.FkTypeId).HasColumnName("fkTypeID");
 
                 entity.Property(e => e.ProduktNavn).IsUnicode(false);
+
+                entity.HasOne(d => d.FkMateriale)
+                    .WithMany(p => p.Produkts)
+                    .HasForeignKey(d => d.FkMaterialeId)
+                    .HasConstraintName("FK__Produkt__fkMater__787EE5A0");
+
+                entity.HasOne(d => d.FkType)
+                    .WithMany(p => p.Produkts)
+                    .HasForeignKey(d => d.FkTypeId)
+                    .HasConstraintName("FK__Produkt__fkTypeI__797309D9");
+
+                entity.Ignore(e => e.Key);
             });
 
             modelBuilder.Entity<ProduktListe>(entity =>
@@ -73,6 +88,20 @@ namespace Projekt
                 entity.Property(e => e.FkButikId).HasColumnName("fkButikID");
 
                 entity.Property(e => e.Pris).IsUnicode(false);
+
+                entity.HasOne(d => d.FkButik)
+                    .WithMany(p => p.ProduktListes)
+                    .HasForeignKey(d => d.FkButikId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__ProduktLi__fkBut__7B5B524B");
+
+                entity.HasOne(d => d.FkProdukt)
+                    .WithMany(p => p.ProduktListes)
+                    .HasForeignKey(d => d.FkProduktId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__ProduktLi__fkPro__7A672E12");
+
+                entity.Ignore(e => e.Key);
             });
 
             modelBuilder.Entity<Type>(entity =>
@@ -84,6 +113,8 @@ namespace Projekt
                     .ValueGeneratedNever();
 
                 entity.Property(e => e.TypeNavn).IsUnicode(false);
+
+                entity.Ignore(e => e.Key);
             });
         }
     }
