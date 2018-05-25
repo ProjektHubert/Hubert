@@ -10,12 +10,10 @@ namespace Projekt.Model.Base
 {
     public class CatalogAppBase<T> : EFCorePersistableCatalogAsync<HubertdbContext, T, T, T>
         where T : class, IStorable, ICopyable, new()
-
-
     {
         public CatalogAppBase()
         {
-            LoadAsync();
+            //LoadAsync();
         }
         public override T CreateDomainObjectFromViewDataObject(T vmObj)
         {

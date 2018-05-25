@@ -42,17 +42,25 @@
         </StackPanel>-->
         <ListView FlowDirection="LeftToRight" 
                   BorderBrush="Black" BorderThickness="2 0 2 2" Width="1100" Height="300" 
-                  Margin="0 0 0 40" ItemsSource="{Binding Path=ItemCollection}">
-            <TextBlock Text="{Binding ProduktNavn}" FontSize="10"/>
-            <TextBlock Text="{Binding TypeNavn}" FontSize="10"/>
-            <TextBlock Text="{Binding MaterialeNavn}" FontSize="10"/>
-            <TextBlock Text="{Binding Antal}" FontSize="10"/>
-            <TextBlock Text="{Binding Adresse}" FontSize="10"/>
-            <TextBlock Text="{Binding }" FontSize="10"/>-->
+                  Margin="0 0 0 40" ItemsSource="{Binding Path=ItemCollectionFiltered}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="viewModel:ProduktListeDataViewModel">
+                    <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal">
+                    <TextBlock Text="{Binding PNavn}" Width="150" FontSize="15" Margin="20 0 0 0"/>
+                    <TextBlock Text="{Binding PType}" Width="100" FontSize="15" Margin="100 0 0 0" />
+                    <TextBlock Text="{Binding PMateriale}" Width="150" FontSize="15" Margin="50 0 0 0"/>
+                    <TextBlock Text="{Binding Stoerrelse}" Width="50" FontSize="15" Margin="0 0 0 0"/>
+                    <TextBlock Text="{Binding BAdresse}" Width="200" FontSize="15" Margin="50 0 0 0"/>
+                    <TextBlock Text="{Binding Antal}" Width="100" FontSize="15" Margin="0 0 -10 0"/>
+                    <TextBlock Text="{Binding Pris}" Width="200" FontSize="15" Margin="10 0 0 0"/>
+                    </StackPanel>
+                </DataTemplate>
+                            </ListView.ItemTemplate>
+            
         </ListView>
 
         <!--</Border>-->
-        <TextBox Text="" PlaceholderText="Skriv her hvad du søger efter" Width="500" Height="30" BorderBrush="Black" IsSpellCheckEnabled="True" BorderThickness="1" Margin="-580 400 0 0" />
+        <TextBox Text="{Binding Sogetekst, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="500" Height="30" BorderBrush="Black" IsSpellCheckEnabled="True" BorderThickness="1" Margin="-580 400 0 0" />
         <Button Content="Big friendly button" Margin="670 400 0 0"/>
     </Grid>
 </Page>

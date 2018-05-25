@@ -18,7 +18,7 @@ namespace Projekt.Model.Catalog
                 if (_instance == null)
                 {
                     _instance = new ProduktCatalog();
-                    Load();
+                    // Load();
                 }
 
                 return _instance;
