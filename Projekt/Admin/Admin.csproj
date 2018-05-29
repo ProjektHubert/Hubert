@@ -95,13 +95,29 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Butik.cs" />
+    <Compile Include="HubertdbContext.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="OpretSide.xaml.cs">
       <DependentUpon>OpretSide.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Produkt.cs" />
+    <Compile Include="ProduktListe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ButikDataViewModel.cs" />
+    <Compile Include="Model\Base\CatalogAppBase.cs" />
+    <Compile Include="Model\Catalog\ButikCatalog.cs" />
+    <Compile Include="Model\Catalog\ProduktCatalog.cs" />
+    <Compile Include="Model\Catalog\ProduktListeCatalog.cs" />
+    <Compile Include="ViewModel\ProduktDataViewModel.cs" />
+    <Compile Include="ViewModel\ProduktListeDataViewModel.cs" />
+    <Compile Include="ViewModel\ProduktListePageViewModel.cs" />
+    <Compile Include="ViewModel\ProduktPageViewModel.cs" />
+    <Compile Include="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -132,11 +148,44 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design">
+      <Version>1.1.5</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.4</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AddOns">
+      <HintPath>..\..\..\..\..\Documents\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018DLLs\AddOns.dll</HintPath>
+    </Reference>
+    <Reference Include="Commands">
+      <HintPath>..\..\..\..\..\Documents\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018DLLs\Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="Controllers">
+      <HintPath>..\..\..\..\..\Documents\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018DLLs\Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="Data">
+      <HintPath>..\..\..\..\..\Documents\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018DLLs\Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DataSources">
+      <HintPath>..\..\..\..\..\Documents\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018DLLs\DataSources.dll</HintPath>
+    </Reference>
+    <Reference Include="Extensions">
+      <HintPath>..\..\..\..\..\Documents\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018DLLs\Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Model">
+      <HintPath>..\..\..\..\..\Documents\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018DLLs\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="ViewModel">
+      <HintPath>..\..\..\..\..\Documents\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018-master\MVVMStarterLibrary2018DLLs\ViewModel.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

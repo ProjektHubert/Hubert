@@ -1,5 +1,6 @@
 ﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using System.Data.SqlClient;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -12,15 +13,15 @@ namespace OpretSmykke
     {
         public OpretSide()
         {
-
+ 
             this.InitializeComponent();
         }
-
+ 
         private void annullerProduktKnap_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
         }
-
+ 
         private void opretProduktKnap_Click(object sender, RoutedEventArgs e)
         {
             string connectionString = null;
@@ -43,14 +44,14 @@ namespace OpretSmykke
                 using (SqlCommand cmd1 = new SqlCommand(sql1, cnn))
                 {
                     cmd1.Parameters.AddWithValue("@ProduktID", addProdukt.Text);
-                    cmd1.Parameters.AddWithValue("@ButikID", butikDropDown.SelectedIndex + 1);
+                    cmd1.Parameters.AddWithValue("@ButikID", butikDropDown.SelectedIndex+1);
                     cmd1.Parameters.AddWithValue("@Pris", addPris.Text);
                     cmd1.Parameters.AddWithValue("@Antal", addAntal.Text);
                     cmd1.Parameters.AddWithValue("@Size", addSize.Text);
                     cmd1.ExecuteNonQuery();
                     opretPopup.IsOpen = true;
                 }
-
+ 
                 cnn.Close();
             }
         }
