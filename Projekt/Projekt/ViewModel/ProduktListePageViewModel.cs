@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 using Data.Transformed.Interfaces;
 using Extensions.ViewModel.Implementation;
 using Model.Interfaces;
@@ -14,6 +15,7 @@ namespace Projekt.ViewModel
     public class ProduktListePageViewModel : PageViewModelCRUD<ProduktListe>
     {
         private string _text;
+        //private int _textid;
 
         public ProduktListePageViewModel() : base(ProduktListeCatalog.Instance, new List<string>(), new List<string>())
         {
@@ -23,6 +25,8 @@ namespace Projekt.ViewModel
 
             InitCatalogs();
             _text = "";
+            // _textid = _textid;
+
         }
         private void InstanceOnLoadEnds()
         {
@@ -50,18 +54,27 @@ namespace Projekt.ViewModel
         {
             get
             {
-                return ItemCollection.Where(i => ProduktCatalog.Instance.Read(i.DataObject.FkProduktId).ProduktNavn.Contains(_text));
+                return ItemCollection.Where(i => ProduktCatalog.Instance.Read(i.DataObject.FkProduktId).ProduktNavn.ToLower().Contains(_text.ToLower()));
+
+
+                // return ItemCollection.Where(a => ProduktCatalog.Instance.Read(a.DataObject.FkProduktId).ProduktId.Equals(_textid));
             }
         }
 
         public string Sogetekst
         {
-            get { return _text;}
+            get
+            {
+                return _text;
+                //return _textid.ToString();
+            }
             set
             {
                 _text = value;
+                // _textid = Convert.ToInt32(value);
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(ItemCollectionFiltered));
+
             }
         }
 

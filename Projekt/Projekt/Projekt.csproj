@@ -104,12 +104,10 @@
     <Compile Include="Produkt.cs" />
     <Compile Include="ProduktListe.cs" />
     <Compile Include="ViewModel\ButikDataViewModel.cs" />
-    <Compile Include="ViewModel\ButikPageViewModel.cs" />
     <Compile Include="ViewModel\ProduktDataViewModel.cs" />
     <Compile Include="ViewModel\ProduktListeDataViewModel.cs" />
     <Compile Include="ViewModel\ProduktListePageViewModel.cs" />
     <Compile Include="ViewModel\ProduktPageViewModel.cs" />
-    <Compile Include="ViewModel\ShowProduktCmd.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

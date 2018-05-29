@@ -14,7 +14,7 @@ namespace Projekt.ViewModel
     public class ProduktListeDataViewModel : DataViewModelBase<ProduktListe>
     {
         public ProduktListeDataViewModel(ProduktListe obj) : base(obj)
-        {     
+        {
         }
 
         public int fkProduktID
@@ -42,14 +42,14 @@ namespace Projekt.ViewModel
             get { return DataObject.Stoerrelse; }
         }
 
-     
+
         public string PNavn
-        { 
+        {
             get
             {
                 Produkt pnavn = ProduktCatalog.Instance.Read(fkProduktID);
                 return $"{(pnavn == null ? "(Tom)" : pnavn.ProduktNavn)}";
-            }  
+            }
         }
         public string PType
         {
@@ -83,7 +83,7 @@ namespace Projekt.ViewModel
             Produkt pt = ProduktCatalog.Instance.Read(fkProduktID);
             Produkt pm = ProduktCatalog.Instance.Read(fkProduktID);
             Butik b = ButikCatalog.Instance.Read(fkButikID);
-    
+
 
 
             return $"  {(pn == null ? "(not set)" : pn.ProduktNavn)}" +
