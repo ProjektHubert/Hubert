@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Data.InMemory.Interfaces;
 using Extensions.Model.Implementation;
 
-namespace Projekt.Model.Base
+namespace Admin.Model.Base
 {
     public class CatalogAppBase<T> : EFCorePersistableCatalogAsync<HubertdbContext, T, T, T>
         where T : class, IStorable, ICopyable, new()

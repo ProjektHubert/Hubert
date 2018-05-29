@@ -8,9 +8,9 @@ using Windows.UI.Xaml.Controls;
 using Data.Transformed.Interfaces;
 using Extensions.ViewModel.Implementation;
 using Model.Interfaces;
-using Projekt.Model.Catalog;
+using Admin.Model.Catalog;
 
-namespace Projekt.ViewModel
+namespace Admin.ViewModel
 {
     public class ProduktListePageViewModel : PageViewModelCRUD<ProduktListe>
     {

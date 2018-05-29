@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Data.Transformed.Interfaces;
 using Extensions.ViewModel.Implementation;
-using Model.Interfaces;
-using Projekt.Model.Catalog;
+using Admin.Model.Catalog;
 
-namespace Projekt.ViewModel
+namespace Admin.ViewModel
 {
     public class ProduktPageViewModel : PageViewModelCRUD<Produkt>
     {

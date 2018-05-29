@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Projekt.Model.Base;
-
-namespace Projekt.Model.Catalog
+﻿namespace Admin.Model.Catalog
 {
     public class ButikCatalog : CatalogAppBase<Butik>
     {

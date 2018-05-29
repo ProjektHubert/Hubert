@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Projekt
+namespace Admin
 {
     public partial class HubertdbContext : DbContext
     {

@@ -2,9 +2,9 @@
 using System.Linq;
 using Data.Transformed.Interfaces;
 using Extensions.ViewModel.Implementation;
-using Projekt.Model.Catalog;
+using Admin.Model.Catalog;
 
-namespace Projekt.ViewModel
+namespace Admin.ViewModel
 {
     public class ProduktListePageViewModel : PageViewModelCRUD<ProduktListe>
     {

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Data.InMemory.Interfaces;
 
-namespace Projekt
+namespace Admin
 {
     public partial class Produkt : ICopyable, IStorable
     {
