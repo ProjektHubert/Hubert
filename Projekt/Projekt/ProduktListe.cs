@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using Data.Transformed.Implementation;
 
 namespace Projekt
 {
-    public partial class ProduktListe : CopyableWithDefaultValuesBase
+    public partial class ProduktListe
     {
         public int FkProduktId { get; set; }
         public int FkButikId { get; set; }
         public string Pris { get; set; }
         public int? Antal { get; set; }
         public int Stoerrelse { get; set; }
-        public override void SetDefaultValues()
-        {
-            
-        }
+
+        public Butik FkButik { get; set; }
+        public Produkt FkProdukt { get; set; }
     }
 }

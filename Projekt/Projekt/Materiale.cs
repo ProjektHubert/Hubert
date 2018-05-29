@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using Data.Transformed.Implementation;
 
 namespace Projekt
 {
-    public partial class Materiale : CopyableWithDefaultValuesBase
+    public partial class Materiale
     {
+        public Materiale()
+        {
+            Produkts = new HashSet<Produkt>();
+        }
+
         public int MaterialeId { get; set; }
         public string MaterialeNavn { get; set; }
-        public override void SetDefaultValues()
-        {
-            
-        }
+
+        public ICollection<Produkt> Produkts { get; set; }
     }
 }
