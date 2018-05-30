@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Data.InMemory.Interfaces;
 
-namespace Admin
+namespace Projekt
 {
     public partial class Butik : ICopyable, IStorable
     {

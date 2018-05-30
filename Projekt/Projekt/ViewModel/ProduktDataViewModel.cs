@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ViewModel.Data.Implementation;
 
-namespace Admin.ViewModel
+namespace Projekt.ViewModel
 {
     public class ProduktDataViewModel : DataViewModelBase<Produkt>
     {

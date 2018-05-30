@@ -6,10 +6,10 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Admin.Model.Catalog;
+using Projekt.Model.Catalog;
 using ViewModel.Data.Implementation;
 
-namespace Admin.ViewModel
+namespace Projekt.ViewModel
 {
     public class ProduktListeDataViewModel : DataViewModelBase<ProduktListe>
     {

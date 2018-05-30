@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Admin.Model.Base;
+using Projekt.Model.Base;
 
-namespace Admin.Model.Catalog
+namespace Projekt.Model.Catalog
 {
     public class ProduktCatalog : CatalogAppBase<Produkt>
     {

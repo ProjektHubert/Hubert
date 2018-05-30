@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Data.Transformed.Interfaces;
 using Extensions.ViewModel.Implementation;
 using Model.Interfaces;
-using Admin.Model.Catalog;
+using Projekt.Model.Catalog;
 
-namespace Admin.ViewModel
+namespace Projekt.ViewModel
 {
     public class ProduktPageViewModel : PageViewModelCRUD<Produkt>
     {
